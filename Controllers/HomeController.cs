@@ -20,6 +20,11 @@ namespace MyApp.Controllers
 
         public async Task<IActionResult> Index()
         {
+            if (!User.Identity.IsAuthenticated)
+            {
+                // Redirige vers la page de connexion
+                return RedirectToAction("Login", "Account", new { area = "Identity" });
+            }
             // Fetch products from the database
             var products = await _context.Product.ToListAsync();
 
