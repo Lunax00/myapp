@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using MyApp.Areas.Identity.Data;
 using MyApp.Models;
-using WebApplication1.Models;
 
 namespace MyApp.Data;
 
@@ -24,9 +23,9 @@ public class MyAppContext : IdentityDbContext<MyAppUser>
 
 public DbSet<MyApp.Models.Order> Order { get; set; } = default!;
 
-public DbSet<WebApplication1.Models.Product> Product { get; set; } = default!;
+public DbSet<MyApp.Models.Product> Product { get; set; } = default!;
 
-public DbSet<WebApplication1.Models.Supplier> Supplier { get; set; } = default!;
+public DbSet<MyApp.Models.Supplier> Supplier { get; set; } = default!;
 
-public DbSet<WebApplication1.Models.StockMovement> StockMovement { get; set; } = default!;
+public DbSet<MyApp.Models.StockMovement> StockMovement { get; set; } = default!;
 }

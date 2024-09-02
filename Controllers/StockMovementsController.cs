@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MyApp.Data;
-using WebApplication1.Models;
+using MyApp.Models;
 
 namespace MyApp.Controllers
 {

@@ -12,8 +12,8 @@ using MyApp.Data;
 namespace MyApp.Migrations
 {
     [DbContext(typeof(MyAppContext))]
-    [Migration("20240829044448_AddCategoryToProduct")]
-    partial class AddCategoryToProduct
+    [Migration("20240901090315_AddDateAddedToProduct")]
+    partial class AddDateAddedToProduct
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -265,6 +265,9 @@ namespace MyApp.Migrations
 
                     b.Property<string>("Category")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("DateAdded")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");

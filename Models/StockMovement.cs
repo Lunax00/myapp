@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace WebApplication1.Models
+namespace MyApp.Models
 {
     public class StockMovement
     {

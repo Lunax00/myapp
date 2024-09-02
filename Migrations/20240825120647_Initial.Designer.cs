@@ -255,7 +255,7 @@ namespace MyApp.Migrations
                     b.ToTable("Order");
                 });
 
-            modelBuilder.Entity("WebApplication1.Models.Product", b =>
+            modelBuilder.Entity("MyApp.Models.Product", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -281,7 +281,7 @@ namespace MyApp.Migrations
                     b.ToTable("Product");
                 });
 
-            modelBuilder.Entity("WebApplication1.Models.StockMovement", b =>
+            modelBuilder.Entity("MyApp.Models.StockMovement", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -307,7 +307,7 @@ namespace MyApp.Migrations
                     b.ToTable("StockMovement");
                 });
 
-            modelBuilder.Entity("WebApplication1.Models.Supplier", b =>
+            modelBuilder.Entity("MyApp.Models.Supplier", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

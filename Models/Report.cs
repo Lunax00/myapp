@@ -1,4 +1,4 @@
-﻿namespace WebApplication1.Models
+﻿namespace MyApp.Models
 {
     public class Report
     {

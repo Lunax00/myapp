@@ -1,4 +1,4 @@
-﻿@model IEnumerable<WebApplication1.Models.Product>
+﻿@model IEnumerable<MyApp.Models.Product>
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -8,11 +8,11 @@
         <div class="cpanel">
             <div class="icon-part">
                 <i class="fa-solid fa-hand-holding-dollar" aria-hidden="true"></i><br>
-                <small class="valtit">Total Sales</small>
-                <p class ="valcard">600DH</p>
+                <small class="valtit">Stock on hand</small>
+                <p class="valcard">@ViewBag.TotalStockOnHand</p>
             </div>
             <div class="card-content-part ">
-                <a href="#" class="detail ">More Details </a>
+                <a href="/Products" class="detail ">More Details </a>
             </div>
         </div>
     </div>
@@ -20,11 +20,11 @@
         <div class="cpanel">
             <div class="icon-part">
                 <i class="fa-solid fa-cart-shopping"></i><br>
-                <small class="valtit">Total Expenses</small>
-                <p class="valcard" >60</p>
+                <small class="valtit">Running out of stock</small>
+                <p class="valcard">@ViewBag.RunningOutOfStockCount</p>
             </div>
             <div class="card-content-part">
-                <a href="#" class="detail">More Details </a>
+                <a href="/Products" class="detail">More Details </a>
             </div>
         </div>
     </div>
@@ -33,17 +33,17 @@
             <div class="icon-part">
                 <i class="fa-solid fa-right-left"></i><br>
                 <small class="valtit">Total Transactions</small>
-                <p class="valcard">60</p>
+                <p class="valcard">@ViewBag.TotalTransactions</p>
             </div>
             <div class="card-content-part">
-                <a href="#" class="detail">More Details </a>
+                <a href="/StockMovements" class="detail">More Details </a>
             </div>
         </div>
     </div>
 
 </div>
 <div class="part2">
-    <h2>Inventory Average by Category</h2>
+    <h2>Last Month's Inventory Average by Category</h2>
     <table>
         <thead>
             <tr>
